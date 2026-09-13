@@ -83,4 +83,22 @@
     return orig.call(this,name,value);
   };
 })();</script>
+<script>(function(){
+  try{
+    var pd=Object.getOwnPropertyDescriptor(XMLHttpRequest.prototype,'responseText');
+    if(pd&&pd.get){
+      var g=pd.get;
+      Object.defineProperty(XMLHttpRequest.prototype,'responseText',{
+        get:function(){
+          var v=g.call(this);
+          if(typeof v==='string'&&v.indexOf('"2班"')!==-1){
+            v=v.split('"2班"').join('"24药学本科02班"');
+          }
+          return v;
+        },
+        configurable:true
+      });
+    }
+  }catch(e){}
+})();</script>
 <script type="module" crossorigin src="./assets/index-DdyknkMO.js"></script><link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-hePW80VL.js"><link rel="modulepreload" crossorigin href="./assets/radix-DY-eoBJD.js"><link rel="stylesheet" crossorigin href="./assets/index-1FBasqZF.css"><meta property="og:title" content="线上班会签到系统"><meta property="og:description" content="线上班会签到系统"><meta property="og:image" content="https://guan4425390.github.io/banhui-signin/favicon.svg"><meta name="description" content="线上班会签到系统"><link rel="icon" href="favicon.svg"></head><body><div id="root"></div></body></html>
