@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="zh"><head><base href="./"><script>(function(){
+<!DOCTYPE html><html lang="zh"><head>
+    <base href="./"><script>(function(){
   var needsPolyfill=(function(){
     try{
       if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
@@ -9,44 +10,19 @@
     }catch(e){return true}
   })();
   if(needsPolyfill){
-    document.write('<script src="./assets/polyfills.js"><\/script>');
+    document.write('<script src="assets/polyfills.js"><\/script>');
   }
-})();</script><script>window.appId = "app_17dz83pwy25";
-    window.userId = "";
-    window.tenantId = "";
-    window.userName = "";
-    window.csrfToken = "gh-pages-csrf";
-    window.ENVIRONMENT = "github-pages";
-    window.__BASENAME__ = "./";
-    window.__API_BASE__ = "https://iwgjq1qrpu.aiforce.cloud/app/app_17dz83pwy25";
-    const appInfo = {
-      name: "",
-      avatar: "",
-      description: "",
-    };
-    if (appInfo.name) {
-      window._appInfo = appInfo;
-    }</script>
-<script>(function(){
-  var base = window.__API_BASE__;
-  if (!base) return;
-  var origOpen = XMLHttpRequest.prototype.open;
-  XMLHttpRequest.prototype.open = function(method, url) {
-    if (typeof url === 'string' && url.charAt(0) === '/' && url.indexOf('/api/') === 0) {
-      url = base + url;
-    }
-    return origOpen.apply(this, arguments);
-  };
-  var origFetch = window.fetch;
-  window.fetch = function(input, init) {
-    if (typeof input === 'string' && input.charAt(0) === '/' && input.indexOf('/api/') === 0) {
-      input = base + input;
-    } else if (input && typeof input === 'object' && input.url && input.url.charAt(0) === '/' && input.url.indexOf('/api/') === 0) {
-      input = new Request(base + input.url, input);
-    }
-    return origFetch.apply(this, arguments);
-  };
-})();</script><script>(function(g){
+})();</script><script>
+    window.appId = '';
+    window.userId = '';
+    window.tenantId = '';
+    window.userName = '';
+    window.csrfToken = '';
+    window.ENVIRONMENT = 'production';
+    window.__BASENAME__ = '';
+    window._appInfo = null;
+    window.__platform__ = {};
+  </script><script>(function(g){
   if(!window[g]){var q=[];window[g]=function(){q.push([].slice.call(arguments));};window[g].q=q;}
   window.__slardarErrBuf=window.__slardarErrBuf||[];
   var ref=document.referrer||'';
@@ -123,8 +99,12 @@
   teaScript.onerror = function() {
     console.warn('Failed to load Tea script');
   };
-  document.head.appendChild(teaScript);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title><script>try {
-      window.__platform__ = JSON.parse('{}');
+  document.head.appendChild(teaScript);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{appName}}</title><script>try {
+      window.__platform__ = JSON.parse('{{{__platform__}}}');
     } catch (e) {
       console.error('Failed to parse __platform__', e);
-    }</script><script type="module" crossorigin src="./assets/index-D8IfZI8k.js"></script><link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-hePW80VL.js"><link rel="modulepreload" crossorigin href="./assets/radix-DY-eoBJD.js"><link rel="stylesheet" crossorigin href="./assets/index-C7SZdsvv.css"><meta property="og:title" content=""><meta property="og:description" content=""><meta property="og:image" content=""><meta name="description" content=""><link rel="icon" href=""></head><body><div id="root"></div></body></html>
+    }</script><script type="module" crossorigin src="assets/index-BlQXQnRN.js"></script><link rel="modulepreload" crossorigin href="assets/rolldown-runtime-hePW80VL.js"><link rel="modulepreload" crossorigin href="assets/radix-DY-eoBJD.js"><link rel="stylesheet" crossorigin href="assets/index-C7SZdsvv.css"><meta property="og:title" content="{{appName}}"><meta property="og:description" content="{{appDescription}}"><meta property="og:image" content="{{appAvatar}}"><meta name="description" content="{{appDescription}}"><link rel="icon" href="{{appAvatar}}">
+  <script>
+    window.__API_BASE__ = 'https://iwgjq1qrpu.aiforce.cloud/app/app_17dz83pwy25';
+  </script>
+</head><body><div id="root"></div></body></html>
