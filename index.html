@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="zh"><head>
-    <base href="./"><script>(function(){
+<!DOCTYPE html><html lang="zh"><head><script>(function(){
   var needsPolyfill=(function(){
     try{
       if(typeof crypto==="undefined"||typeof crypto.randomUUID!=="function")return true;
@@ -10,19 +9,23 @@
     }catch(e){return true}
   })();
   if(needsPolyfill){
-    document.write('<script src="assets/polyfills.js"><\/script>');
+    document.write('<script src="./assets/polyfills.js"><\/script>');
   }
-})();</script><script>
-    window.appId = '';
-    window.userId = '';
-    window.tenantId = '';
-    window.userName = '';
-    window.csrfToken = '';
-    window.ENVIRONMENT = 'production';
-    window.__BASENAME__ = '';
-    window._appInfo = null;
-    window.__platform__ = {};
-  </script><script>(function(g){
+})();</script><script>window.appId = "";
+    window.userId = "";
+    window.tenantId = "";
+    window.userName = "";
+    window.csrfToken = "";
+    window.ENVIRONMENT = "";
+    window.__BASENAME__ = "";
+    const appInfo = {
+      name: "线上班会签到系统",
+      avatar: "favicon.svg",
+      description: "线上班会签到系统",
+    };
+    if (appInfo.name) {
+      window._appInfo = appInfo;
+    }</script><script>(function(g){
   if(!window[g]){var q=[];window[g]=function(){q.push([].slice.call(arguments));};window[g].q=q;}
   window.__slardarErrBuf=window.__slardarErrBuf||[];
   var ref=document.referrer||'';
@@ -103,8 +106,7 @@
       window.__platform__ = JSON.parse('{}');
     } catch (e) {
       console.error('Failed to parse __platform__', e);
-    }</script><script type="module" crossorigin src="assets/index-BlQXQnRN.js"></script><link rel="modulepreload" crossorigin href="assets/rolldown-runtime-hePW80VL.js"><link rel="modulepreload" crossorigin href="assets/radix-DY-eoBJD.js"><link rel="stylesheet" crossorigin href="assets/index-C7SZdsvv.css"><meta property="og:title" content="线上班会签到系统"><meta property="og:description" content="线上班会签到系统"><meta property="og:image" content="https://guan4425390.github.io/banhui-signin/favicon.svg"><meta name="description" content="线上班会签到系统"><link rel="icon" href="favicon.svg">
-  <script>
+    }</script><script>
     window.__API_BASE__ = 'https://iwgjq1qrpu.aiforce.cloud/app/app_17dz83pwy25';
   </script>
-</head><body><div id="root"></div></body></html>
+<script type="module" crossorigin src="./assets/index-DdyknkMO.js"></script><link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-hePW80VL.js"><link rel="modulepreload" crossorigin href="./assets/radix-DY-eoBJD.js"><link rel="stylesheet" crossorigin href="./assets/index-1FBasqZF.css"><meta property="og:title" content="线上班会签到系统"><meta property="og:description" content="线上班会签到系统"><meta property="og:image" content="https://guan4425390.github.io/banhui-signin/favicon.svg"><meta name="description" content="线上班会签到系统"><link rel="icon" href="favicon.svg"></head><body><div id="root"></div></body></html>
