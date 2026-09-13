@@ -75,4 +75,12 @@
     }</script><script>
     window.__API_BASE__ = 'https://iwgjq1qrpu.aiforce.cloud/app/app_17dz83pwy25';
   </script>
+<script>(function(){
+  var BLACK={traceparent:1,tracestate:1,'x-tt-traceinfo':1};
+  var orig=XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader=function(name,value){
+    if(Object.prototype.hasOwnProperty.call(BLACK,String(name).toLowerCase()))return;
+    return orig.call(this,name,value);
+  };
+})();</script>
 <script type="module" crossorigin src="./assets/index-DdyknkMO.js"></script><link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-hePW80VL.js"><link rel="modulepreload" crossorigin href="./assets/radix-DY-eoBJD.js"><link rel="stylesheet" crossorigin href="./assets/index-1FBasqZF.css"><meta property="og:title" content="线上班会签到系统"><meta property="og:description" content="线上班会签到系统"><meta property="og:image" content="https://guan4425390.github.io/banhui-signin/favicon.svg"><meta name="description" content="线上班会签到系统"><link rel="icon" href="favicon.svg"></head><body><div id="root"></div></body></html>
