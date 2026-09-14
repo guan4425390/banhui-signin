@@ -68,14 +68,22 @@
     win[export_obj].l = +new Date();
   })(window, 'collectEvent');
 
-<meta charset="UTF-8"><script>(function(){
-  var w = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-  if (w >= 700) {
-    var s = Math.min(2, Math.round((w / 480) * 100) / 100);
-    document.querySelector('meta[name=viewport]').setAttribute('content',
-      'width=device-width, initial-scale=' + s + ', maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes');
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes"><script>(function(){
+  function apply(){
+    try{
+      var w = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+      if (w < 700) return;
+      var m = document.querySelector('meta[name=viewport]');
+      if (!m) return;
+      var s = Math.min(2, Math.round((w / 480) * 100) / 100);
+      m.setAttribute('content', 'width=device-width, initial-scale=' + s +
+        ', maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes');
+    }catch(e){}
   }
-})();</script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes"><title>线上班会签到系统</title><script>try {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', apply);
+  } else { apply(); }
+})();</script><title>线上班会签到系统</title><script>try {
       window.__platform__ = JSON.parse('{}');
     } catch (e) {
       console.error('Failed to parse __platform__', e);
