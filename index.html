@@ -68,7 +68,14 @@
     win[export_obj].l = +new Date();
   })(window, 'collectEvent');
 
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"><title>线上班会签到系统</title><script>try {
+<meta charset="UTF-8"><script>(function(){
+  var w = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  if (w >= 700) {
+    var s = Math.min(2, Math.round((w / 480) * 100) / 100);
+    document.querySelector('meta[name=viewport]').setAttribute('content',
+      'width=device-width, initial-scale=' + s + ', maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes');
+  }
+})();</script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes"><title>线上班会签到系统</title><script>try {
       window.__platform__ = JSON.parse('{}');
     } catch (e) {
       console.error('Failed to parse __platform__', e);
@@ -101,16 +108,6 @@
     }
   }catch(e){}
 })();</script>
-<script>(function(){
-  var d=document;
-  function block(e){e.preventDefault();}
-  d.addEventListener('touchmove',function(e){if(e.touches&&e.touches.length>1)block(e);},{passive:false});
-  d.addEventListener('gesturestart',block);
-  d.addEventListener('gesturechange',block);
-  d.addEventListener('gestureend',block);
-  d.addEventListener('dblclick',block);
-  d.addEventListener('wheel',function(e){if(e.ctrlKey)block(e);},{passive:false});
-  d.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&(e.key==='+'||e.key==='-'||e.key==='0'))block(e);});
-})();</script>
+
 <script type="module" crossorigin src="./assets/index-CYDQB81N-v2.js"></script><link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-hePW80VL.js"><link rel="modulepreload" crossorigin href="./assets/radix-DY-eoBJD.js"><link rel="stylesheet" crossorigin href="./assets/index-1FBasqZF.css"><meta property="og:title" content="线上班会签到系统"><meta property="og:description" content="线上班会签到系统"><meta property="og:image" content="https://guan4425390.github.io/banhui-signin/favicon.svg"><meta name="description" content="线上班会签到系统"><link rel="icon" href="favicon.svg">
 </head><body><div id="root"></div></body></html>
