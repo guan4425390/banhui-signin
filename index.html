@@ -97,8 +97,20 @@
     if(Object.prototype.hasOwnProperty.call(BLACK,String(name).toLowerCase()))return;
     return orig.call(this,name,value);
   };
-})();</script>
-<script>(function(){
+})();</script><script>(function(){
+  var encNew = encodeURIComponent('24药学本科02班');
+  var encOld = encodeURIComponent('2班');
+  var origOpen = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(m, u){
+    try{
+      if (typeof u === 'string') {
+        u = u.split(encNew).join(encOld);
+        u = u.split('24药学本科02班').join('2班');
+      }
+    }catch(e){}
+    return origOpen.apply(this, arguments);
+  };
+})();</script><script>(function(){
   try{
     var pd=Object.getOwnPropertyDescriptor(XMLHttpRequest.prototype,'responseText');
     if(pd&&pd.get){
